@@ -1,0 +1,127 @@
+/* Start Variables */
+:root {
+  --main-duration: 0.3s;
+  --main-color: #fac031;
+}
+/* End Variables */
+/* Start Global Rules */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: sans-serif;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+/* END global rules */
+/* Start Header Section */
+header .container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  padding: 5px 0;
+}
+@media (max-width: 767px){
+    header .container{
+        justify-content: space-between;
+        padding: 5px 10px;
+    }  
+}
+header .container img {
+  width: 80px;
+  cursor: pointer;
+}
+header .container ul {
+  width: 35%;
+  display: flex;
+  justify-content: space-around;
+}
+@media (max-width: 920px) {
+  header .container ul {
+    width: 45%;
+  }
+}
+@media (max-width: 767px) {
+  header .container ul {
+    display: none;
+  }
+}
+header .container ul a {
+  font-size: 14px;
+  font-weight: 500;
+  color: #000;
+  transition: var(--main-duration);
+  position: relative;
+}
+header .container ul a:hover {
+  color: var(--main-color);
+}
+header .container ul a::before {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0px;
+  height: 2px;
+  background-color: var(--main-color);
+  transition: var(--main-duration);
+}
+header .container ul a:hover::before {
+  width: 100%;
+}
+@media (max-width: 767px){
+    header .container .icons{
+        display: none;
+    }   
+}
+header .container .icons i {
+  font-size: 16px;
+  margin-right: 5px;
+  cursor: pointer;
+  transition: var(--main-duration);
+}
+header .container .icons i:hover {
+  color: var(--main-color);
+}
+header .container .toggle {
+  display: none;
+}
+@media (max-width: 767px) {
+  header .container .toggle {
+    display: block;
+    cursor: pointer;
+    
+  }
+  header .container .toggle:hover + ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+  }
+  header .container .toggle:hover + ul li{
+    width: 100%;
+    text-align: center;
+  }
+  header .container .toggle:hover + ul li:last-child{
+    padding-bottom: 5px;
+  }
+  header .container .toggle:hover + ul li a{
+    display: block;
+    padding-top: 10px;
+    color: #fff;
+  }
+}
+/* End Header Section */
