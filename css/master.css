@@ -28,11 +28,11 @@ header .container {
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
   padding: 5px 0;
 }
-@media (max-width: 767px){
-    header .container{
-        justify-content: space-between;
-        padding: 5px 10px;
-    }  
+@media (max-width: 767px) {
+  header .container {
+    justify-content: space-between;
+    padding: 5px 10px;
+  }
 }
 header .container img {
   width: 80px;
@@ -76,10 +76,10 @@ header .container ul a::before {
 header .container ul a:hover::before {
   width: 100%;
 }
-@media (max-width: 767px){
-    header .container .icons{
-        display: none;
-    }   
+@media (max-width: 767px) {
+  header .container .icons {
+    display: none;
+  }
 }
 header .container .icons i {
   font-size: 16px;
@@ -97,7 +97,6 @@ header .container .toggle {
   header .container .toggle {
     display: block;
     cursor: pointer;
-    
   }
   header .container .toggle:hover + ul {
     display: flex;
@@ -111,14 +110,14 @@ header .container .toggle {
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 100;
   }
-  header .container .toggle:hover + ul li{
+  header .container .toggle:hover + ul li {
     width: 100%;
     text-align: center;
   }
-  header .container .toggle:hover + ul li:last-child{
+  header .container .toggle:hover + ul li:last-child {
     padding-bottom: 5px;
   }
-  header .container .toggle:hover + ul li a{
+  header .container .toggle:hover + ul li a {
     display: block;
     padding-top: 10px;
     color: #fff;
