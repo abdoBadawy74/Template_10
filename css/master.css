@@ -2,6 +2,7 @@
 :root {
   --main-duration: 0.3s;
   --main-color: #fac031;
+  --text-grey: #777;
 }
 /* End Variables */
 /* Start Global Rules */
@@ -124,3 +125,109 @@ header .container .toggle {
   }
 }
 /* End Header Section */
+
+/* Start Main Section */
+main .landing {
+  width: 90%;
+  height: 100vh;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 30px;
+  position: relative;
+}
+@media (max-width: 767px) {
+  main .landing {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+}
+main .landing .text {
+  max-width: 500px;
+}
+@media (max-width: 767px) {
+  main .landing .text {
+    text-align: center;
+  }
+}
+main .landing .text h1 {
+  font-size: 50px;
+  line-height: 0.9;
+  margin-bottom: 30px;
+}
+main .landing .text h1 span {
+  color: var(--main-color);
+  font-family: mv boli;
+
+  font-size: 60px;
+}
+main .landing .text p {
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--text-grey);
+}
+main .landing img {
+  width: 600px;
+}
+@media (max-width: 1200px) {
+  main .landing img {
+    width: 500px;
+  }
+}
+@media (max-width: 920px) {
+  main .landing img {
+    width: 400px;
+  }
+}
+@media (max-width: 767px) {
+  main .landing img {
+    /* display: none; */
+    width: 300px;
+  }
+}
+main .landing button {
+  position: absolute;
+  left: 0;
+  bottom: 40px;
+  padding: 10px 30px 10px 10px;
+  border: none;
+  background-color: var(--main-color);
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+@media (max-width: 920px) {
+  main .landing button {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+@media (max-width: 920px) {
+  main .landing button {
+    bottom: -30px;
+    font-size: 13px;
+  }
+}
+main .landing button i {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: 0.3;
+}
+main .landing button:hover i {
+  animation: move 0.5s infinite;
+}
+@keyframes move {
+  0%,
+  100% {
+    right: 15px;
+  }
+  50% {
+    right: 20px;
+  }
+}
+/* End Main Section */
