@@ -6,7 +6,7 @@
 }
 /* End Variables */
 /* Start Global Rules */
-html{
+html {
   scroll-behavior: smooth;
 }
 * {
@@ -234,34 +234,39 @@ main .landing button:hover i {
 }
 /* End Main Section */
 /* Start about Section */
-.about{
+.about {
   margin-top: 40px;
   margin-bottom: 30px;
   display: flex;
   gap: 50px;
   position: relative;
 }
-@media (max-width:920px) {
-  .about{
+@media (max-width: 920px) {
+  .about {
     margin-top: 80px;
     flex-direction: column;
     align-items: center;
   }
 }
-.about .image img{
+.about .image img {
   width: 700px;
 }
-@media (max-width:1024px) {
-  .about .image img{
+@media (max-width: 1024px) {
+  .about .image img {
     width: 500px;
   }
 }
-.about .txt{
+@media (max-width: 767px) {
+  .about .image img {
+    width: 350px;
+  }
+}
+.about .txt {
   flex-direction: row-reverse;
   margin-top: 40px;
 }
-@media (max-width:920px){
-  .about .txt{
+@media (max-width: 920px) {
+  .about .txt {
     text-align: center;
     width: 95%;
     margin: auto;
@@ -270,22 +275,21 @@ main .landing button:hover i {
 .about .txt h2 {
   font-size: 40px;
 }
-.about .txt h2 span{
+.about .txt h2 span {
   color: var(--main-color);
   font-family: mv boli;
 }
-.about .txt h3{
+.about .txt h3 {
   font-size: 25px;
   margin: 20px 0 20px;
 }
-.about .txt p{
-
+.about .txt p {
   font-size: 13px;
-  margin: 20px 20px 0 0 ;
-  color: #777;
+  margin: 20px 20px 0 0;
+  color: var(--text-grey);
   line-height: 1.6;
 }
-.about button{
+.about button {
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -298,12 +302,101 @@ main .landing button:hover i {
   cursor: pointer;
   transition: var(--main-duration);
 }
-@media (max-width:920px) {
-  .about button{
+@media (max-width: 920px) {
+  .about button {
     bottom: -60px;
   }
 }
-.about button:hover{
+.about button:hover {
   background-color: #000;
 }
 /* End about Section */
+
+/* Start Menu Section */
+.menu {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+.menu h2 {
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+.menu h2 span {
+  color: var(--main-color);
+  font-family: mv boli;
+}
+.menu .menu-content {
+  width: 90%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+@media (min-width:1300px) {
+  .menu .menu-content{
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+}
+.menu .box {
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  overflow: hidden;
+}
+.menu .box .item-image {
+  overflow: hidden;
+  position: relative;
+}
+.menu .box .item-image img {
+  width: 100%;
+  height: 200px;
+  transition: 0.3s;
+}
+.menu .box .item-image img:hover {
+  transform: scale(1.1);
+}
+.menu .box .item-image i {
+  position: absolute;
+  right: -20px;
+  top: 7px;
+  font-size: 20px;
+  transition: 0.3s;
+}
+.menu .box .item-image i:hover {
+  color: var(--main-color);
+  transition: 0.3s;
+}
+.menu .box:hover .item-image i {
+  right: 7px;
+}
+.menu .box h4 {
+  color: var(--main-color);
+  font-size: 20px;
+  margin: 10px 0;
+}
+.menu .box p {
+  font-size: 13px;
+  color: var(--text-grey);
+  margin-bottom: 10px;
+}
+.menu .box span {
+  font-size: 16px;
+  font-weight: bold;
+}
+.menu .box .stars i {
+  color: var(--main-color);
+  font-size: 13px;
+  margin: 10px 0;
+}
+.menu .box button{
+  padding: 10px 20px;
+  color: #fff;
+  background-color: #000;
+  cursor: pointer;
+  border: none;
+  transition: 0.3s;
+}
+.menu .box button:hover{
+  background-color: #333;
+}
+/* End Menu Section */
