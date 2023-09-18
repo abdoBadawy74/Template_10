@@ -6,6 +6,9 @@
 }
 /* End Variables */
 /* Start Global Rules */
+html{
+  scroll-behavior: smooth;
+}
 * {
   margin: 0;
   padding: 0;
@@ -161,7 +164,6 @@ main .landing .text h1 {
 main .landing .text h1 span {
   color: var(--main-color);
   font-family: mv boli;
-
   font-size: 60px;
 }
 main .landing .text p {
@@ -231,3 +233,77 @@ main .landing button:hover i {
   }
 }
 /* End Main Section */
+/* Start about Section */
+.about{
+  margin-top: 40px;
+  margin-bottom: 30px;
+  display: flex;
+  gap: 50px;
+  position: relative;
+}
+@media (max-width:920px) {
+  .about{
+    margin-top: 80px;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.about .image img{
+  width: 700px;
+}
+@media (max-width:1024px) {
+  .about .image img{
+    width: 500px;
+  }
+}
+.about .txt{
+  flex-direction: row-reverse;
+  margin-top: 40px;
+}
+@media (max-width:920px){
+  .about .txt{
+    text-align: center;
+    width: 95%;
+    margin: auto;
+  }
+}
+.about .txt h2 {
+  font-size: 40px;
+}
+.about .txt h2 span{
+  color: var(--main-color);
+  font-family: mv boli;
+}
+.about .txt h3{
+  font-size: 25px;
+  margin: 20px 0 20px;
+}
+.about .txt p{
+
+  font-size: 13px;
+  margin: 20px 20px 0 0 ;
+  color: #777;
+  line-height: 1.6;
+}
+.about button{
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  border: none;
+  background-color: var(--main-color);
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: var(--main-duration);
+}
+@media (max-width:920px) {
+  .about button{
+    bottom: -60px;
+  }
+}
+.about button:hover{
+  background-color: #000;
+}
+/* End about Section */
