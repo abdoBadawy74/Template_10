@@ -350,7 +350,7 @@ main .landing button:hover i {
 .menu .box .item-image img {
   width: 100%;
   height: 200px;
-  transition: 0.3s;
+  transition: var(--main-duration);
 }
 .menu .box .item-image img:hover {
   transform: scale(1.1);
@@ -360,11 +360,10 @@ main .landing button:hover i {
   right: -20px;
   top: 7px;
   font-size: 20px;
-  transition: 0.3s;
+  transition: var(--main-duration);
 }
 .menu .box .item-image i:hover {
   color: var(--main-color);
-  transition: 0.3s;
 }
 .menu .box:hover .item-image i {
   right: 7px;
@@ -394,7 +393,7 @@ main .landing button:hover i {
   background-color: #000;
   cursor: pointer;
   border: none;
-  transition: 0.3s;
+  transition: var(--main-duration);
 }
 .menu .box button:hover {
   background-color: #333;
@@ -439,7 +438,7 @@ main .landing button:hover i {
   padding: 30px 10px;
   opacity: 0;
   overflow: hidden;
-  transition: 0.4s;
+  transition: var(--main-duration);
 }
 .gallary .gallary-content .box:hover .info {
   opacity: 1;
@@ -449,7 +448,6 @@ main .landing button:hover i {
   font-family: polo;
   font-size: 24px;
   margin-top: 15px;
-  transition: 0.3s;
 }
 .gallary .gallary-content .box .info span {
   color: #fff;
@@ -457,7 +455,6 @@ main .landing button:hover i {
   font-size: 13px;
   margin-top: 30px;
   margin-bottom: 15px;
-  transition: 0.3s;
 }
 .gallary .gallary-content .box .info a {
   position: absolute;
@@ -468,9 +465,80 @@ main .landing button:hover i {
   font-size: 12px;
   background-color: var(--main-color);
   padding: 5px 10px;
-  transition: 0.3s;
+  transition: var(--main-duration);
 }
 .gallary .gallary-content .box:hover a {
   bottom: 30px;
 }
 /* End Gallary Section */
+
+/* Start Reviews Section*/
+.reviews {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+.reviews h2 {
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+.reviews h2 span {
+  color: var(--main-color);
+  font-family: mv boli;
+}
+.reviews .reviews-content {
+  width: 90%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+.reviews .reviews-content .box {
+  padding: 10px;
+  border-radius: 10px;
+  position: relative;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+.reviews .reviews-content .box img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 5px solid #ccc;
+  transition: var(--main-duration);
+}
+.reviews .reviews-content .box:hover img {
+  transform: translateY(-30px);
+}
+.reviews .reviews-content .box h3 {
+  transition: var(--main-duration);
+}
+.reviews .reviews-content .box:hover h3 {
+  transform: translateY(-30px);
+}
+.reviews .box .stars i {
+  color: var(--main-color);
+  font-size: 12px;
+  margin-bottom: 10px;
+  transition: var(--main-duration);
+}
+.reviews .box:hover .stars i {
+  transform: translateY(-20px);
+}
+.reviews .box .review_social {
+  opacity: 0;
+  transition: var(--main-duration);
+}
+.reviews .box:hover .review_social {
+  opacity: 1;
+  transform: translateY(-20px);
+}
+.reviews .box .review_social i {
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+.reviews .box p{
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--text-grey);
+}
+/* End Reviews Section*/
