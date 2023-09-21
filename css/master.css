@@ -535,8 +535,13 @@ main .landing button:hover i {
 .reviews .box .review_social i {
   font-size: 12px;
   margin-bottom: 10px;
+  cursor: pointer;
+  transition: var(--main-duration);
 }
-.reviews .box p{
+.reviews .box .review_social i:hover {
+  color: var(--main-color);
+}
+.reviews .box p {
   font-size: 13px;
   line-height: 1.6;
   color: var(--text-grey);
