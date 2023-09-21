@@ -577,7 +577,7 @@ main .landing button:hover i {
   justify-content: space-between;
 }
 @media (max-width: 1024px) {
-  .order .order-content{
+  .order .order-content {
     flex-wrap: wrap;
     justify-content: center;
   }
@@ -585,8 +585,8 @@ main .landing button:hover i {
 .order .order-content img {
   width: 500px;
 }
-@media (max-width: 1024px){
-  .order .order-content img{
+@media (max-width: 1024px) {
+  .order .order-content img {
     width: 400px;
   }
 }
@@ -598,8 +598,8 @@ main .landing button:hover i {
   text-align: left;
   position: relative;
 }
-@media(max-width:767px){
-  .order .order-content .form{
+@media (max-width: 767px) {
+  .order .order-content .form {
     flex-direction: column;
   }
 }
@@ -637,10 +637,92 @@ main .landing button:hover i {
   transition: var(--main-duration);
 }
 @media (max-width: 1024px) {
-  .order .order-content .form a{
+  .order .order-content .form a {
     left: 50%;
     bottom: -50px;
     transform: translateX(-50%);
   }
 }
 /* End Order Section */
+
+/* Start Team Section */
+.team {
+  height: 100vh;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  text-align: center;
+  background-image: url(../imgs/bg1.jpg);
+  background-size: cover;
+}
+.team h2 {
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+.team h2 span {
+  color: var(--main-color);
+  font-family: mv boli;
+}
+.team .team-content{
+  width: 90%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px,1fr));
+margin-top: 100px;
+}
+.team .chef {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background: none;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+  transition: var(--main-duration);
+}
+.team .chef:hover{
+  border-radius: 15px;
+}
+.team .chef img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: var(--main-duration);
+  z-index: 222;
+}
+.team .chef:hover img{
+  border-radius: 15px;
+  top: 10px;
+}
+.team .chef .info {
+  width: 80%;
+  margin: auto;
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translateX(-50%);
+  transition: var(--main-duration);
+}
+.team .chef:hover .info{
+  top: 50%;
+
+}
+.team .chef .info h3 {
+  color: var(--main-color);
+}
+.team .chef .info p {
+  font-size: 14px;
+  margin: 10px 0 ;
+  color: var(--text-grey);
+}
+.team .chef .info i {
+  font-size: 13px;
+  cursor: pointer;
+  transition: var(--main-duration);
+}
+.team .chef .info i:hover {
+  color: var(--main-color);
+}
+/* End Team Section */
