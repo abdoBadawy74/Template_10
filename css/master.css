@@ -31,6 +31,12 @@ header .container {
   align-items: center;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
   padding: 5px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+
+  background-color: #fff;
+  z-index: 222;
 }
 @media (max-width: 767px) {
   header .container {
@@ -144,7 +150,7 @@ main .landing {
   main .landing {
     flex-direction: column;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 50px;
     margin-bottom: 30px;
   }
 }
@@ -546,4 +552,95 @@ main .landing button:hover i {
   line-height: 1.6;
   color: var(--text-grey);
 }
+
 /* End Reviews Section*/
+/* Start Order Section */
+.order {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  text-align: center;
+  background-image: url(../imgs/bg2.jpg);
+  background-size: cover;
+}
+.order h2 {
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+.order h2 span {
+  color: var(--main-color);
+  font-family: mv boli;
+}
+.order .order-content {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 1024px) {
+  .order .order-content{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+.order .order-content img {
+  width: 500px;
+}
+@media (max-width: 1024px){
+  .order .order-content img{
+    width: 400px;
+  }
+}
+.order .order-content .form {
+  flex-basis: 45%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: left;
+  position: relative;
+}
+@media(max-width:767px){
+  .order .order-content .form{
+    flex-direction: column;
+  }
+}
+.order .order-content .row {
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+.order .order-content p {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+.order .order-content input {
+  width: 250px;
+  background-color: #eee;
+  border: 1px solid #ccc;
+  outline: none;
+  padding: 10px;
+  border-radius: 3px;
+  font-size: 10px;
+}
+.order .order-content input:focus {
+  border-color: var(--main-color);
+}
+.order .order-content input::placeholder {
+  font-size: 10px;
+}
+.order .order-content .form a {
+  position: absolute;
+  left: 5%;
+  bottom: 5%;
+  color: #fff;
+  font-size: 14px;
+  background-color: var(--main-color);
+  padding: 10px 20px;
+  transition: var(--main-duration);
+}
+@media (max-width: 1024px) {
+  .order .order-content .form a{
+    left: 50%;
+    bottom: -50px;
+    transform: translateX(-50%);
+  }
+}
+/* End Order Section */
